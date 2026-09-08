@@ -29,6 +29,11 @@
  * to make sure all of your branches work properly
  ***********************************************************************/
 
+; //Read sensor data from SRAM and store in registers R20 (Sensor1) and R21 (Sensor2)
+.equ THRESHOLD = 0x90 ; Create a constant
+.def Sensor1 = R20 ; Define a nickname for R20
+.def Sensor2 = R21 ; Define a nickname for R21
+
 .org 0x0000 ; next instruction will be written to address 0x0000
             ; (the location of the reset vector)
 RJMP main	; set reset vector to point to the main code entry point
